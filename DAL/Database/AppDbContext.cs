@@ -10,10 +10,11 @@ namespace DAL.Database
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=localhost;Initial Catalog=db-FucinaEroi;Integrated Security=True;Pooling=False");
+
         }
+        public DbSet<User> Users { get; set; }
+
     }
 }

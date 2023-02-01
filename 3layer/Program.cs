@@ -10,9 +10,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// add services to the DB
-builder.Services.AddDbContext<AppDbContext>(
-        options => options.UseSqlServer("Data Source=localhost;Initial Catalog=db-FucinaEroi;Integrated Security=True;Pooling=False"));
+// Add services DB
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
+
 
 var app = builder.Build();
 
