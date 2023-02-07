@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace DAL.Model
 {
-    public class User
+    public class Character
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; } = String.Empty;
-        public string Password { get; set; } = String.Empty;
 
-        public ICollection<Character> Characters { get; set; }
+        public ICollection<User> Users { get; set; }
+        
+        
     }
 }
