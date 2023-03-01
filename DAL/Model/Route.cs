@@ -12,5 +12,7 @@ namespace DAL.Model
         public  DateTime Date { get; set; }
         public bool IsOpen { get; set; }
         public Driver? Driver { get; set; }
+        
+        public ICollection<Package> Packages { get; set; }
     }
 }

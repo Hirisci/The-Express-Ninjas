@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using DAL.Model;
 
 namespace DAL.Database
 {
@@ -8,6 +9,11 @@ namespace DAL.Database
         {
 
         }
+
+        DbSet<Route> Routes { get; set; }
+        DbSet<Driver> Drivers { get; set; }
+        DbSet<Package> Packages { get; set; }
+        DbSet<DriveLicense> DriverLicenses { get; set; }
        
     }
   
