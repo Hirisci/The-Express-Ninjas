@@ -11,6 +11,7 @@ namespace DAL.Model
         public int Id { get; set; }
         public string Address { get; set; } = string.Empty;
         public string City { get; set; } = string.Empty;
+        public int HouseNumber { get; set; }
         public int PostalCode { get; set; }
         public string Country { get; set; } = "Italia";
         public string Statuts { get; set; } = string.Empty;
