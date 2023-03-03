@@ -10,7 +10,7 @@ namespace DAL.Model
         public string Name { get; set; } = string.Empty;
         [StringLength(25, ErrorMessage = "Name Surname Length is 25")]
         public string Surname { get; set; } = string.Empty;
-        public string img { get; set; } = string.Empty;
+        public string? img { get; set; } = string.Empty;
 
         //Relazioni
         ICollection<DriveLicense> DriveLicenses { get; set; } = new List<DriveLicense>();

@@ -15,7 +15,7 @@ namespace DAL.Model
         public bool IsDelivered { get; set;}
 
         //Relazioni
-        public int? DriveId { get; set; }
+        public int? DriverId { get; set; }
         public Driver? Driver { get; set; }
 
         public int? RouteId { get; set; }
