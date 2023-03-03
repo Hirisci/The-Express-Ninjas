@@ -15,6 +15,10 @@ namespace DAL.Model
 
         public DateTime Expiration { get; set; }
         public DateTime Release { get; set; }
-        public Driver Driver { get; set; } = new Driver();
+
+        //Relazioni
+        public int DriverId { get; set; }
+        public Driver Driver { get; set; }
+
     }
 }

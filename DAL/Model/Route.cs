@@ -11,8 +11,7 @@ namespace DAL.Model
         public int Id { get; set; }
         public  DateTime Date { get; set; }
         public bool IsOpen { get; set; }
-        public Driver? Driver { get; set; }
         
-        public ICollection<Package> Packages { get; set; }
+        ICollection<Order> Orders { get; set; }
     }
 }

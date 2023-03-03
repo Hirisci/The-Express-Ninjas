@@ -13,7 +13,10 @@ namespace DAL.Model
         public string City { get; set; } = string.Empty;
         public int PostalCode { get; set; }
         public int Country { get; set; }
-        public string Status { get; set; } = string.Empty;
-        public Route? Route { get; set; }
+        public string Statuts { get; set; } = string.Empty;
+        
+        //Relazioni
+        public int? OrderId { get; set; }
+        public Order? Order { get; set; }
     }
 }

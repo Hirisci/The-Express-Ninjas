@@ -14,6 +14,7 @@ namespace DAL.Database
         DbSet<Driver> Drivers { get; set; }
         DbSet<Package> Packages { get; set; }
         DbSet<DriveLicense> DriverLicenses { get; set; }
+        DbSet<Order> Orders { get; set; }
        
     }
   

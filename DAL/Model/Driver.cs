@@ -11,7 +11,9 @@ namespace DAL.Model
         [StringLength(25, ErrorMessage = "Name Surname Length is 25")]
         public string Surname { get; set; } = string.Empty;
         public string img { get; set; } = string.Empty;
-        public ICollection<DriveLicense> DriverLicenses { get; set; }
-        public ICollection<Route> Routes { get; set; }
+
+        //Relazioni
+        ICollection<DriveLicense> DriveLicenses { get; set; } = new List<DriveLicense>();
+        ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }
